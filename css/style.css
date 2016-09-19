@@ -1,4 +1,4 @@
-/* Nav Bar*/
+/* Nav Bar */
 .navbar {
   background-color: #333;
   color: #fff;
@@ -9,12 +9,12 @@
   padding: 0 3%;
 }
 
+/* Post Content */
 #posts-container {
   padding-left: 3%;
   padding-right: 3%;
 }
 
-/* Post Items */
 .post-item {
   background-color: #fff;
   border-bottom: solid 1px #ccc;

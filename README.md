@@ -16,27 +16,11 @@ Pseudo-code
   - a. Fetch news from API URL: http://hn.algolia.com/api/v1/search_by_date?query=angular
   - b.1 List posts in rows
 
--- Pending --
   - b.2 if "story_title" is null, then use "title". else neglect the post
   - b.3 Show Author after title
   - b.4 order by created_at decending order (post in posts | orderBy: created_at)
   - b.5 Click on the ROW => link to "story_url" or "url" at NEW TAB
-  - c. Add "Trash" icon to remove post
-```
-  $scope.api.remove() = function remove () {
-    $('#remove').on('click', function () {
-      this.parent().destroy()
-    })
-  }
-```
-
-  - d.1. controller
-  - d.2. factory
-  - d.3. service
-
-- Optional Module:
   - angular-moment
-
 
 - Styling:
 ```
@@ -55,3 +39,19 @@ Pseudo-code
   background-color: $fafafa;
 }
 ```
+
+-- Pending --
+  - c. Add "Trash" icon to remove post
+```
+  $scope.api.remove() = function remove () {
+    $('#remove').on('click', function () {
+      this.parent().destroy()
+    })
+  }
+```
+
+  - d.1. controller
+  - d.2. factory
+  - d.3. service
+
+
