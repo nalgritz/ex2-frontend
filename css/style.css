@@ -1,0 +1,14 @@
+.post-item {
+  background-color: #fff;
+  border: 1px #ccc;
+  color: #333;
+  font-size: 13pt;
+}
+
+.author {
+  font-color: #999;
+}
+
+.post-item:hover {
+  background-color: #fafafa;
+}
