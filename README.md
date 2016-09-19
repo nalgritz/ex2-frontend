@@ -20,6 +20,8 @@ Pseudo-code
   - b.3 Show Author after title
   - b.4 order by created_at decending order (post in posts | orderBy: created_at)
   - b.5 Click on the ROW => link to "story_url" or "url" at NEW TAB
+  - d.1. controller
+  - d.2. factory
   - angular-moment
 
 - Styling:
@@ -50,8 +52,4 @@ Pseudo-code
   }
 ```
 
-  - d.1. controller
-  - d.2. factory
   - d.3. service
-
-
