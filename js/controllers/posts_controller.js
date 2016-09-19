@@ -13,7 +13,12 @@ app.controller('PostsCtrl', ['$scope', '$http', function($scope, $http){
         e.splice(i, 1);
       }
     }
-    console.log(e);
+  }
+
+  // trash button doesn't listen this or covered by html a tag event
+  function deletePost (e) {
+    console.log('click');
+    console.log(this.data("id"));
   }
 
   $scope.api = {

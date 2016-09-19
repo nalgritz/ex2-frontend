@@ -3,4 +3,4 @@ var app = /**
 *
 * Description
 */
-angular.module('hackerNewsApp', ['ui.bootstrap']);
+angular.module('hackerNewsApp', ['ui.bootstrap', 'angularMoment'])

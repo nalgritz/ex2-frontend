@@ -9,12 +9,19 @@
   padding: 0 3%;
 }
 
+#posts-container {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
 /* Post Items */
 .post-item {
   background-color: #fff;
   border-bottom: solid 1px #ccc;
   color: #333;
   font-size: 13pt;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .author {
