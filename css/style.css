@@ -1,14 +1,31 @@
+/* Nav Bar*/
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 2% 0;
+}
+
+#navbar-container {
+  padding: 0 3%;
+}
+
+/* Post Items */
 .post-item {
   background-color: #fff;
-  border: 1px #ccc;
+  border-bottom: solid 1px #ccc;
   color: #333;
   font-size: 13pt;
 }
 
 .author {
-  font-color: #999;
+  color: #999;
 }
 
 .post-item:hover {
   background-color: #fafafa;
+  border-color: transparent;
+}
+
+.trash:hover {
+  color: #d9534f;
 }

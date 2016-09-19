@@ -1,6 +1,6 @@
-var app = angular./**
+var app = /**
 * hackerNewsApp Module
 *
 * Description
 */
-angular.module('hackerNewsApp', []).
+angular.module('hackerNewsApp', ['ui.bootstrap']);
