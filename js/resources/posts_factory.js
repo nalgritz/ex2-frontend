@@ -1,4 +1,4 @@
-app.factory('GetPosts', ['$resource', function($resource){
+app.factory('GetPosts', ['$resource', 'setData', function($resource, setData){
   return $resource("http://hn.algolia.com/api/v1/search_by_date?query=angular", {}, {
     query: {
       method: 'GET',
