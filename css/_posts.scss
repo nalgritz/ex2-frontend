@@ -1,0 +1,34 @@
+$primary-color: #333;
+$secondary-color: #fff;
+$item-hover: #fafafa;
+$trash-hover: #C62828;
+$border-color: #ccc;
+
+#posts-container{
+  padding-left: 0;
+  padding-right: 0;
+
+  .post-item {
+    background-color: $secondary-color;
+    border-bottom: solid 1px $border-color;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    &:hover {
+      background-color: $item-hover;
+      border-color: transparent;
+    }
+
+    .post-content {
+      color: $primary-color;
+      font-size: 13pt;
+
+      .author {
+        color: #999;
+      }
+    }
+
+    .trash:hover {
+      color: $trash-hover;
+    }
+  }
+}

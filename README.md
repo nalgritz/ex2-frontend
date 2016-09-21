@@ -20,6 +20,7 @@ Pseudo-code
   - b.3 Show Author after title
   - b.4 order by created_at decending order (post in posts | orderBy: created_at)
   - b.5 Click on the ROW => link to "story_url" or "url" at NEW TAB
+  - c. Add "Trash" icon to remove post
   - d.1. controller
   - d.2. factory
   - angular-moment
@@ -43,13 +44,4 @@ Pseudo-code
 ```
 
 -- Pending --
-  - c. Add "Trash" icon to remove post
-```
-  $scope.api.remove() = function remove () {
-    $('#remove').on('click', function () {
-      this.parent().destroy()
-    })
-  }
-```
-
   - d.3. service

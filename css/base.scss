@@ -1,0 +1,19 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #fff;
+
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+}
+
+  .navbar {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 2% 0;
+    #navbar-container {
+      padding: 0 3%;
+    }
+  }
+
+@import 'posts';
