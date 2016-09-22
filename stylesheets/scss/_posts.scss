@@ -1,0 +1,108 @@
+$primary-color: #333;
+$secondary-color: #fff;
+$item-hover: #fafafa;
+$trash-hover: #C62828;
+$border-color: #ccc;
+$author-color: #999;
+
+/* Spinner Circle Rotation */
+.sp-circle {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  margin: 50px;
+  height: 28px;
+  width: 28px;
+  animation: rotate 0.6s infinite linear;
+  border: 8px solid $border-color;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+// Posts Container
+#posts-container{
+  padding-left: 0;
+  padding-right: 0;
+
+  /* Spinner Circle Rotation */
+  .sp-circle {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    margin: 50px;
+    height: 28px;
+    width: 28px;
+    animation: rotate 0.6s infinite linear;
+    border: 8px solid $border-color;
+    border-right-color: transparent;
+    border-radius: 50%; }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg); } }
+
+  .post-item {
+    -webkit-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    background-color: $secondary-color;
+    border-bottom: solid 1px $border-color;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    &:hover {
+      background-color: $item-hover;
+      border-color: transparent;
+    }
+
+    .post-container {
+      color: $primary-color;
+      font-size: 13pt;
+      text-decoration: none;
+
+      .author {
+        color: $author-color;
+      }
+    }
+
+    .trash {
+      line-height: inherit;
+      min-height: inherit;
+      &:hover {
+        color: $trash-hover;
+      }
+    }
+  }
+  .post-item.ng-leave.ng-leave-active,
+  .post-item.ng-enter {
+      -webkit-transform: scaleY(0);
+      -moz-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      -o-transform: scaleY(0);
+      transform: scaleY(0);
+      height: 0px;
+      opacity: 0;
+  }
+
+  .post-item.ng-enter.ng-enter-active,
+  .post-item.ng-leave {
+      -webkit-transform: scaleY(1);
+      -moz-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      -o-transform: scaleY(1);
+      transform: scaleY(1);
+      height: 50px;
+      opacity: 1;
+  }
+
+}

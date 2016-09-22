@@ -3,4 +3,4 @@ var app = /**
 *
 * Description
 */
-angular.module('hackerNewsApp', ['ngResource', 'angularMoment']);
+angular.module('hackerNewsApp', ['ngResource', 'angularMoment', 'ngAnimate']);
