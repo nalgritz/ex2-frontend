@@ -5,26 +5,6 @@ $trash-hover: #C62828;
 $border-color: #ccc;
 $author-color: #999;
 
-/* Spinner Circle Rotation */
-.sp-circle {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  margin: 50px;
-  height: 28px;
-  width: 28px;
-  animation: rotate 0.6s infinite linear;
-  border: 8px solid $border-color;
-  border-right-color: transparent;
-  border-radius: 50%;
-}
-
-@keyframes rotate {
-  0%    { transform: rotate(0deg); }
-  100%  { transform: rotate(360deg); }
-}
-
 // Posts Container
 #posts-container{
   padding-left: 0;
@@ -51,18 +31,20 @@ $author-color: #999;
       transform: rotate(360deg); } }
 
   .post-item {
-    -webkit-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    // -webkit-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    // -moz-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    // -ms-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    // -o-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    // transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition-duration: 2s;
+    transition-property: opacity, top, height;
+    position: relative;
     background-color: $secondary-color;
-    border-bottom: solid 1px $border-color;
     padding-top: 1%;
     padding-bottom: 1%;
+    border: 1px solid $border-color;
     &:hover {
       background-color: $item-hover;
-      border-color: transparent;
     }
 
     .post-container {
@@ -76,33 +58,29 @@ $author-color: #999;
     }
 
     .trash {
-      line-height: inherit;
-      min-height: inherit;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       &:hover {
         color: $trash-hover;
       }
     }
+
   }
-  .post-item.ng-leave.ng-leave-active,
-  .post-item.ng-enter {
-      -webkit-transform: scaleY(0);
-      -moz-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-      -o-transform: scaleY(0);
-      transform: scaleY(0);
-      height: 0px;
-      opacity: 0;
+  .post-item.ng-enter-active,
+  .post-item.ng-leave {
+    opacity: 1;
+    // Don't understand why I press remove an item, the 2nd item doesn't move up as nganimate advertised....
+    // height doesn't work also esp. when deleted item squeeze until certain height but not 0px,
+    top: 0;
+    height: 50px;
   }
 
-  .post-item.ng-enter.ng-enter-active,
-  .post-item.ng-leave {
-      -webkit-transform: scaleY(1);
-      -moz-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-      -o-transform: scaleY(1);
-      transform: scaleY(1);
-      height: 50px;
-      opacity: 1;
+  .post-item.ng-leave-active,
+  .post-item.ng-enter {
+    opacity: 0;
+    top: -50px;
+    height: 0px;
   }
 
 }
