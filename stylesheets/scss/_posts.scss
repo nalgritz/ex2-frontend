@@ -3,6 +3,7 @@ $secondary-color: #fff;
 $item-hover: #fafafa;
 $trash-hover: #C62828;
 $border-color: #ccc;
+$author-color: #999;
 
 /* Spinner Circle Rotation */
 .sp-circle {
@@ -29,27 +30,54 @@ $border-color: #ccc;
   padding-left: 0;
   padding-right: 0;
 
+  /* Spinner Circle Rotation */
+  .sp-circle {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    margin: 50px;
+    height: 28px;
+    width: 28px;
+    animation: rotate 0.6s infinite linear;
+    border: 8px solid $border-color;
+    border-right-color: transparent;
+    border-radius: 50%; }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg); } }
+
   .post-item {
     background-color: $secondary-color;
     border-bottom: solid 1px $border-color;
     padding-top: 1%;
     padding-bottom: 1%;
+    position: relative;
     &:hover {
       background-color: $item-hover;
       border-color: transparent;
     }
 
-    .post-content {
+    .post-container {
       color: $primary-color;
       font-size: 13pt;
+      text-decoration: none;
 
       .author {
-        color: #999;
+        color: $author-color;
       }
     }
 
-    .trash:hover {
-      color: $trash-hover;
+    .trash {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      &:hover {
+        color: $trash-hover;
+      }
     }
   }
 }
