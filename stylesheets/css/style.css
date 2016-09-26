@@ -13,7 +13,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   /* Spinner Circle Rotation */ }
-  #posts-container .sp-circle {
+  #posts-container #sp-circle {
     position: absolute;
     top: 45%;
     left: 45%;

@@ -35,7 +35,7 @@
   </nav>
 
   <section id="posts-container" class="container-fluid" ng-controller="PostsCtrl">
-    <div class="sp-circle"></div>
+    <div id="sp-circle" ng-show=""></div>
     <div class="post-item col-xs-12"
         ng-repeat="post in posts | orderBy : 'created_at': true">
       <a class="post-container col-xs-11" target="_blank" ng-href="{{post.story_url}}">
